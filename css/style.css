@@ -88,21 +88,13 @@ nav ul {
     padding: 0;
     text-align: center;
     overflow: hidden;
+    width: 100%;
 }
 
 nav ul li {
-    float: left;
-    margin-right: var(--spacing-lg);
-}
-
-nav ul li:last-child {
-    margin-right: 0;
-}
-
-nav ul::after {
-    content: "";
-    display: table;
-    clear: both;
+    display: inline-block;
+    margin: 0 var(--spacing-sm);
+    vertical-align: top;
 }
 
 nav ul li a {
@@ -113,6 +105,7 @@ nav ul li a {
     transition: background-color var(--transition-normal);
     font-weight: 500;
     font-size: var(--font-size-base);
+    display: block;
 }
 
 nav ul li a:hover {
@@ -704,8 +697,13 @@ footer {
         max-width: 300px;
     }
     
-    nav ul {
-        gap: var(--spacing-sm);
+    nav ul li {
+        margin: 0 var(--spacing-xs);
+    }
+    
+    nav ul li a {
+        padding: var(--spacing-xs);
+        font-size: var(--font-size-sm);
     }
     
     .profile-image {
